@@ -2,8 +2,33 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.3s ease;
 }
+
+/* Dark mode styles for the entire page */
+.dark-mode body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode main {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode section {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+
 
 header {
     background-color: #333;
@@ -38,9 +63,28 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
-    margin: 0;
-    color: #333;
+.job {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.job-date {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.job-company {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.job-title {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 ul {
@@ -49,5 +93,23 @@ ul {
 
 li {
     margin-bottom: 5px;
-    color: #555;
 }
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+
+
