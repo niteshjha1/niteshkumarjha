@@ -30,22 +30,26 @@ body {
 }
 
 
+/* Adjust padding and margin for better visibility and spacing */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 20px 30px; /* Added extra padding at the bottom */
 }
 
 h1 {
-    margin: 0;
-    font-size: 36px;
+    margin-bottom: 5px; /* Added margin at the bottom */
 }
 
-h2 {
-    margin: 5px 0;
-    font-size: 24px;
+.nav-links li {
+    margin-right: 15px; /* Reduced margin between navigation items */
 }
+
+/* Ensure proper alignment of navigation items on small screens */
+@media only screen and (max-width: 600px) {
+    .nav-links li {
+        margin-right: 10px; /* Further reduced margin for smaller screens */
+    }
+}
+
 
 p {
     margin: 5px 0;
@@ -140,55 +144,6 @@ li {
     width: calc(16.666% - 15px);  /* Distribute items evenly across 6 columns with margin */
 }
 
-
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    z-index: 1000; /* Ensure the top bar stays on top of other content */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-links li:last-child {
-    margin-right: 0;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #007bff;
-}
-
-
-
 .top-bar {
     position: fixed;
     top: 0;
@@ -240,23 +195,79 @@ li {
     align-items: flex-start;
 }
 
-.name-info h1 {
-    margin: 0;
-    font-size: 24px; 
+.name-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: auto; /* Pushes the name-info to the left */
 }
 
-* Blue color for "Android Developer" */
-.name-info h2 {
-    color: #007bff; /
-    margin: 5px 0;
+.name-info h1, .name-info h2 {
+    margin: 0;
 }
+
+.name-info h2 {
+    color: #007bff;
+    margin-top: 5px;
+}
+
+
 
 main {
-    padding-top: 60px; 
+    padding-top: 60px; /* Adjust this value as needed */
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
 }
+/* Footer Styles */
+
+/* Footer Styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center items horizontally */
+}
+
+.social-icons li {
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-icons li:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}
+
+.social-icon {
+    width: 60px; /* Set the width of social media icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .social-icons {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center icons vertically */
+    }
+
+    .social-icons li {
+        margin-bottom: 10px; /* Add spacing between vertically stacked icons */
+    }
+
+    .social-icons li:last-child {
+        margin-bottom: 0; /* Remove margin from last item */
+    }
+}
+
+
 
 
 
