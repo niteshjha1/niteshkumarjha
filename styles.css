@@ -242,57 +242,19 @@ footer {
     height: auto;
 }
 
-/* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
-    /* Adjust styles for mobile devices here */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .nav-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .name-info h1 {
-        display: block; /* Ensure h1 is visible */
-    }
-
-    .name-info h2 {
-        order: 1; /* Place h2 before h1 */
-        color: #007bff;
-        margin: 0;
-    }
-
-    .social-icons {
-        flex-direction: row; /* Change direction to horizontal */
-        justify-content: center; /* Center items horizontally */
-        margin-top: 10px; /* Add some margin from the top */
-    }
-
-    .social-icons li {
-        margin-right: 10px; /* Add spacing between icons */
-        margin-bottom: 0; /* Remove margin from the bottom */
-    }
-
-    .social-icons li:last-child {
-        margin-right: 0; /* Remove margin from the last icon */
-    }
-	
-    header h1 {
-        font-size: 24px; /* Decrease the font size for mobile devices */
-    }
-	
-	main {
-        margin-top: 20px; /* Add margin to the top of the main content */
-    }
-	
- .container {
+    .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin-right: 30px;
     }
 
     .nav-links {
@@ -300,11 +262,12 @@ footer {
         flex-direction: column;
         align-items: flex-end;
         margin-top: 2px;
-		color: #007bff;
+        color: #007bff;
         position: absolute;
-        right: 30px; /* Adjust the distance from the right side */
-        top: 2px; /* Adjust the distance from the top */
-        margin-right: 30px; /* Add margin from the right side */
+        right: 30px;
+        top: 2px;
+        margin-right: 30px;
+        padding-right: 30px; /* Add padding to create space from the right side */
     }
 
     .nav-links li {
@@ -312,5 +275,32 @@ footer {
         margin-bottom: 5px;
     }
 
+    /* Hide nav links by default */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show nav links when menu icon is clicked */
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 50px; /* Adjust the distance from the top */
+        right: 0; /* Align to the right */
+        background-color: #f8f8f8; /* Background color for nav links */
+        padding: 10px; /* Add padding */
+        border-radius: 5px; /* Add border radius */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+		margin-right=20px;
+    }
 }
+
+@media only screen and (min-width: 601px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+
 
