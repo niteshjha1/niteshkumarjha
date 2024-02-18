@@ -123,9 +123,6 @@ li {
 
 /* Skill Style */
 
-
-
-
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -140,14 +137,126 @@ li {
     background-color: #007bff;
     color: #fff;
     border-radius: 20px;
-    width: calc(16.666% - 15px); /* Distribute items evenly across 6 columns with margin */
+    width: calc(16.666% - 15px);  /* Distribute items evenly across 6 columns with margin */
+}
+
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the top bar stays on top of other content */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
 }
 
 
 
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding to provide space for navigation */
+    z-index: 1000; /* Ensure the top bar stays on top of other content */
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+.name-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name-info h1 {
+    margin: 0;
+    font-size: 24px; 
+}
+
+* Blue color for "Android Developer" */
+.name-info h2 {
+    color: #007bff; /
+    margin: 5px 0;
+}
+
+main {
+    padding-top: 60px; 
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
 
 
 
