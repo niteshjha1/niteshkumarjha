@@ -27,19 +27,25 @@
 
 
     <main>
-	     <section>
+    <section id="about" class="section-with-border">
             <h3>About Me</h3>
             <p>Software Engineer with 5 Years of working experience in IT sector with a strong focus on Android Application Development, delivering exceptional results for 3 years. Currently enhancing user experiences at a leading French telecom company.</p>
         </section>
-        <section>
+		
+	
+    <section id="contact" class="section-with-border">
     <h3>Contact</h3>
     <div class="contact-info">
-        <ul>
-            <li><strong>Phone:</strong> +33-766100889</li>
-            <li><strong>Email:</strong> niteshjha1@gmail.com</li>
-            <li><strong>Address:</strong> Paris France</li>
-        </ul>
-        <img src="Nitesh-JHA.jpg" alt="Nitesh JHA" width="150">
+        <div class="contact-details">
+            <ul>
+                <li><strong>Phone:</strong> +33-766100889</li>
+                <li><strong>Email:</strong> niteshjha1@gmail.com</li>
+                <li><strong>Address:</strong> Paris France</li>
+            </ul>
+        </div>
+        <div class="contact-image">
+            <img src="Nitesh-JHA.jpg" alt="Nitesh JHA" width="150">
+        </div>
     </div>
 </section>
 
@@ -98,7 +104,7 @@
             </div>
         </section>
 
-        <section>
+    <section id="education" class="section-with-border">
             <h3>Education</h3>
             <p><strong>2018-2020</strong></p>
             <p><strong>Master in Software Engineering - EPITA, Paris, France</strong></p>
@@ -106,7 +112,7 @@
             <p><strong>Bachelor in Technology - Sharda University, Greater Noida, India</strong></p>
         </section>
 
-<section>
+    <section id="expertise" class="section-with-border">
     <h3>Expertise</h3>
     <ul class="skills-list">
         <li>Java</li>
@@ -141,28 +147,26 @@
 
     <button id="theme-toggle">Toggle Dark/Light Mode</button>
 
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuIcon = document.querySelector('.menu-icon');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuIcon.addEventListener('click', function() {
-            console.log("Menu icon clicked"); // Add this line for debugging
-            navLinks.classList.toggle('show');
-            navLinks.classList.toggle('shift-left');
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
         });
-    });
-</script>
+    </script>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+	
 	
 <footer>
     <ul class="social-icons">
