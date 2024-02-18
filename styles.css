@@ -1,3 +1,4 @@
+/* Common styles for both light and dark mode */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,49 +8,42 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Dark mode styles for the entire page */
+/* Dark mode styles */
 .dark-mode body {
     background-color: #333;
     color: #fff;
 }
 
-.dark-mode header {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark-mode main {
+.dark-mode header,
+.dark-mode main,
+.dark-mode section {
     background-color: #333;
     color: #fff;
 }
 
 .dark-mode section {
-    background-color: #222;
-    color: #fff;
     border-color: #444;
 }
 
-
 /* Adjust padding and margin for better visibility and spacing */
 header {
-    padding: 20px 20px 30px; /* Added extra padding at the bottom */
+    padding: 20px 20px 30px;
 }
 
 h1 {
-    margin-bottom: 5px; /* Added margin at the bottom */
+    margin-bottom: 5px;
 }
 
 .nav-links li {
-    margin-right: 15px; /* Reduced margin between navigation items */
+    margin-right: 15px;
 }
 
 /* Ensure proper alignment of navigation items on small screens */
 @media only screen and (max-width: 600px) {
     .nav-links li {
-        margin-right: 10px; /* Further reduced margin for smaller screens */
+        margin-right: 10px;
     }
 }
-
 
 p {
     margin: 5px 0;
@@ -126,7 +120,6 @@ li {
 }
 
 /* Skill Style */
-
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -141,7 +134,7 @@ li {
     background-color: #007bff;
     color: #fff;
     border-radius: 20px;
-    width: calc(16.666% - 15px);  /* Distribute items evenly across 6 columns with margin */
+    width: calc(16.666% - 15px);
 }
 
 .top-bar {
@@ -151,8 +144,8 @@ li {
     width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 10px 20px; /* Adjust padding to provide space for navigation */
-    z-index: 1000; /* Ensure the top bar stays on top of other content */
+    padding: 10px 20px;
+    z-index: 1000;
 }
 
 .container {
@@ -189,17 +182,19 @@ li {
     color: #007bff;
 }
 
-.name-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+.nav-links li a {
+        color: #007bff; /* Blue color for clickable links */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .nav-links li a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
 
 .name-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: auto; /* Pushes the name-info to the left */
 }
 
 .name-info h1, .name-info h2 {
@@ -211,18 +206,14 @@ li {
     margin-top: 5px;
 }
 
-
-
 main {
-    padding-top: 60px; /* Adjust this value as needed */
+    padding-top: 60px;
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
 }
-/* Footer Styles */
 
 /* Footer Styles */
-
 footer {
     background-color: #333;
     color: #fff;
@@ -234,40 +225,92 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Align items horizontally */
-    justify-content: center; /* Center items horizontally */
+    display: flex;
+    justify-content: center;
 }
 
 .social-icons li {
-    margin-right: 10px; /* Adjust spacing between icons */
+    margin-right: 10px;
 }
 
 .social-icons li:last-child {
-    margin-right: 0; /* Remove margin from last item */
+    margin-right: 0;
 }
 
 .social-icon {
-    width: 60px; /* Set the width of social media icons */
-    height: auto; /* Maintain aspect ratio */
+    width: 60px;
+    height: auto;
 }
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
+    /* Adjust styles for mobile devices here */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .name-info h1 {
+        display: block; /* Ensure h1 is visible */
+    }
+
+    .name-info h2 {
+        order: 1; /* Place h2 before h1 */
+        color: #007bff;
+        margin: 0;
+    }
+
     .social-icons {
-        flex-direction: column; /* Stack icons vertically */
-        align-items: center; /* Center icons vertically */
+        flex-direction: row; /* Change direction to horizontal */
+        justify-content: center; /* Center items horizontally */
+        margin-top: 10px; /* Add some margin from the top */
     }
 
     .social-icons li {
-        margin-bottom: 10px; /* Add spacing between vertically stacked icons */
+        margin-right: 10px; /* Add spacing between icons */
+        margin-bottom: 0; /* Remove margin from the bottom */
     }
 
     .social-icons li:last-child {
-        margin-bottom: 0; /* Remove margin from last item */
+        margin-right: 0; /* Remove margin from the last icon */
     }
+	
+    header h1 {
+        font-size: 24px; /* Decrease the font size for mobile devices */
+    }
+	
+	main {
+        margin-top: 20px; /* Add margin to the top of the main content */
+    }
+	
+ .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 2px;
+		color: #007bff;
+        position: absolute;
+        right: 30px; /* Adjust the distance from the right side */
+        top: 2px; /* Adjust the distance from the top */
+        margin-right: 30px; /* Add margin from the right side */
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
 }
-
-
-
-
 
